@@ -1,23 +1,60 @@
-<template lang="en">
-  <header style="display: flex; justify-content: center; padding: 0.5rem 0; background-color: blue">
-  <label for="select-difficulty-level" style="color: white">Select the level of difficulty you want: </label>
-  <select id="select-difficulty-level" v-model="selectedDifficulty" @change="handleDifficultyChange" style="margin-left: 0.5rem" >
-    <option v-for="(value, key) in difficultyLevels" :value="key" :key="key">
-      {{ value.label }}
-    </option>
-  </select>
+<template>
+  <header
+    style="
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem 0;
+      background-color: blue;
+    "
+  >
+    <label for="select-difficulty-level" style="color: white"
+      >Select the level of difficulty you want:
+    </label>
+    <select
+      id="select-difficulty-level"
+      v-model="selectedDifficulty"
+      style="margin-left: 0.5rem"
+      @change="handleDifficultyChange"
+    >
+      <option v-for="(value, key) in difficultyLevels" :key="key" :value="key">
+        {{ value.label }}
+      </option>
+    </select>
   </header>
 
-  <div style="margin:auto; margin-top: 2rem; border: 2px solid black; width: 60%; padding: 1rem; max-width: 45rem;">
+  <div
+    style="
+      margin: auto;
+      margin-top: 2rem;
+      border: 2px solid black;
+      width: 60%;
+      padding: 1rem;
+      max-width: 45rem;
+    "
+  >
     <div style="display: flex; flex: 1; justify-content: space-between">
       <span>Time Left: {{ timeLeft }}</span>
       <span>Score: {{ score }}</span>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; margin: 1rem 0">
-    <p>Enter the below word: </p>
-    <p>{{ displayedWord }}</p>
-    <input ref='inputRef' v-model="input" id='word-entry' @input='handleInputChange' :class="{ 'margin-bottom-1': msg }" autocomplete='off'/>
-    <p v-if="msg">{{ msg }}</p>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0;
+      "
+    >
+      <p>Enter the below word:</p>
+      <p>{{ displayedWord }}</p>
+      <input
+        id="word-entry"
+        ref="inputRef"
+        v-model="input"
+        :class="{ 'margin-bottom-1': msg }"
+        autocomplete="off"
+        @input="handleInputChange"
+      />
+      <p v-if="msg">{{ msg }}</p>
     </div>
   </div>
 
@@ -30,11 +67,10 @@
     <div v-if="userFound" style="color: green;">{{ userInfo }}</div>
     <p v-if="errorMsg" style="color: red">{{ errorMsg }}</p>
   </div> -->
-
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, onUnmounted, ref } from 'vue';
+import { defineComponent, onMounted, onUnmounted, PropType, ref } from 'vue';
 
 const difficultyLevels = {
   easy: {
@@ -59,7 +95,7 @@ export default defineComponent({
   name: 'WordTypingGame',
   props: {
     wordList: {
-      type: Array,
+      type: Array as PropType<string[]>,
       required: true,
     },
   },

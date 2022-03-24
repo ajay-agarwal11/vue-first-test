@@ -1,6 +1,6 @@
 <template lang="en">
   <main style="font-size: 24px">
-    <WordTypingGame :wordList='wordArray'></WordTypingGame>
+    <word-typing-game :wordList="wordArray"></word-typing-game>
   </main>
 </template>
 

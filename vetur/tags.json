@@ -1,0 +1,50 @@
+{
+  "essential-link": {
+    "attributes": [
+      "title",
+      "caption",
+      "link",
+      "icon"
+    ],
+    "description": ""
+  },
+  "EssentialLink": {
+    "attributes": [
+      "title",
+      "caption",
+      "link",
+      "icon"
+    ],
+    "description": ""
+  },
+  "example-component": {
+    "attributes": [
+      "title",
+      "todos",
+      "meta",
+      "active"
+    ],
+    "description": ""
+  },
+  "ExampleComponent": {
+    "attributes": [
+      "title",
+      "todos",
+      "meta",
+      "active"
+    ],
+    "description": ""
+  },
+  "word-typing-game": {
+    "attributes": [
+      "wordList"
+    ],
+    "description": ""
+  },
+  "WordTypingGame": {
+    "attributes": [
+      "wordList"
+    ],
+    "description": ""
+  }
+}

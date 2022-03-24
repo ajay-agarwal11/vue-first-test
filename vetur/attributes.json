@@ -1,0 +1,56 @@
+{
+  "essential-link/title": {
+    "type": "string"
+  },
+  "EssentialLink/title": {
+    "type": "string"
+  },
+  "essential-link/caption": {
+    "type": "string"
+  },
+  "EssentialLink/caption": {
+    "type": "string"
+  },
+  "essential-link/link": {
+    "type": "string"
+  },
+  "EssentialLink/link": {
+    "type": "string"
+  },
+  "essential-link/icon": {
+    "type": "string"
+  },
+  "EssentialLink/icon": {
+    "type": "string"
+  },
+  "example-component/title": {
+    "type": "string"
+  },
+  "ExampleComponent/title": {
+    "type": "string"
+  },
+  "example-component/todos": {
+    "type": "array"
+  },
+  "ExampleComponent/todos": {
+    "type": "array"
+  },
+  "example-component/meta": {
+    "type": "Meta"
+  },
+  "ExampleComponent/meta": {
+    "type": "Meta"
+  },
+  "example-component/active": {
+    "type": "boolean"
+  },
+  "ExampleComponent/active": {
+    "type": "boolean"
+  },
+  "word-typing-game/wordList": {
+    "type": "array"
+  },
+  "WordTypingGame/wordList": {
+    "type": "array"
+  }
+}
